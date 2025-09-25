@@ -1,8 +1,7 @@
 ---
-title: "O mně"
+title: "O Mně"
 layout: "simple"
 ---
-## O Mně
 
 Jmenuji se **Martin Konečný** a narodil jsem se v dubnu 2005. Po absolvování základní školy jsem pokračoval na gymnáziu, kde jsem dokončil středoškolské vzdělání v roce 2023. V současné době studuji na **Vysokém učení technickém v Brně**, obor **Konstrukční inženýrství**, kde jsem ve druhém ročníku bakalářského studia.
 

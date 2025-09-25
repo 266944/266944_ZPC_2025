@@ -1,7 +1,7 @@
 # --- Theme Options ---
 defaultTheme = "dark"        # "light", "dark" nebo "auto"
 disableThemeToggle = true   # zobrazuje přepínač světlo/tma
-colorscheme = "zinc"
+colorscheme = "congo"
 
 enableA11y = false
 enableSearch = true

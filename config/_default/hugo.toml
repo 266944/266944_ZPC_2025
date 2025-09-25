@@ -7,13 +7,6 @@ title = "ZPC-2025"
 theme = "blowfish"
 defaultContentLanguage = "cs"
 
-# --- PARAMS: VZHLED ---
-[params]
-  colorScheme = "marvel"             # barevná paleta: "congo", "blowfish", "marvel", ...
-  defaultAppearance = "dark"       # výchozí vzhled: "dark" nebo "light"
-  autoSwitchAppearance = false     # přepínání podle systému (true = automaticky)
-  disableThemeToggle = false       # zobrazit přepínač tématu
-
 # --- OSTATNÍ NASTAVENÍ ---
 enableRobotsTXT = true
 summaryLength = 0

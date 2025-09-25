@@ -17,18 +17,19 @@
 
 [[main]]
   name = "O Mně"
+  pageRef = "posts/O Mně"
   weight = 20
 
 [[main]]
   name = "Projekt 1 - Webstránka"
   parent = "Projekty"
-  pageRef = "Projekty/Projekt 1 - Webstránka"
+  pageRef = "posts/Projekt 1 - Webstránka"
   weight = 10
 
 [[main]]
   name = "Projekt 2 - 2D grafika a řezání"
   parent = "Projekty"
-  pageRef = "Projekty/Projekt 2 - 2D grafika a řezání"
+  pageRef = "posts/Projekt 2 - 2D grafika a řezání"
   weight = 10
 
 [[main]]
@@ -52,7 +53,7 @@
   [[main]]
   name = "Finální Projekt"
   parent = "Projekty"
-  pageRef = "Projekty/Finální Projekt"
+  pageRef = "posts/Finální Projekt"
   weight = 10
 #[[subnavigation]]
 #  name = "An interesting topic"

@@ -1,0 +1,4 @@
+---
+title: "Webstránka"
+layout: "simple"
+---
