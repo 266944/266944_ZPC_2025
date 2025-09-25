@@ -28,7 +28,8 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 
 # --- Homepage ---
 [homepage]
-  layout = "profile"
+  layout = "background"
+  homepageImage = "night sky.jpg"
   showRecent = true
   showRecentItems = 5
   showMoreLink = false
