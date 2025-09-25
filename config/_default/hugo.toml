@@ -1,0 +1,78 @@
+# -- Site Configuration --
+# Více info: https://blowfish.page/docs/getting-started/
+
+baseURL = "https://266944_ZPC_2025.com/"
+languageCode = "cs"
+title = "ZPC-2025"
+theme = "blowfish"
+defaultContentLanguage = "cs"
+
+# --- PARAMS: VZHLED ---
+[params]
+  colorScheme = "marvel"             # barevná paleta: "congo", "blowfish", "marvel", ...
+  defaultAppearance = "dark"       # výchozí vzhled: "dark" nebo "light"
+  autoSwitchAppearance = false     # přepínání podle systému (true = automaticky)
+  disableThemeToggle = false       # zobrazit přepínač tématu
+
+# --- OSTATNÍ NASTAVENÍ ---
+enableRobotsTXT = true
+summaryLength = 0
+buildDrafts = false
+buildFuture = false
+enableEmoji = true
+
+# --- STRÁNKOVÁNÍ ---
+[pagination]
+  pagerSize = 100
+
+# --- OBRAZY ---
+[imaging]
+  anchor = "Center"
+
+# --- TAXONOMIE ---
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  author = "authors"
+  series = "series"
+
+# --- SITEMAPA ---
+[sitemap]
+  changefreq = "daily"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+# --- VÝSTUPY ---
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# --- RELATED OBSAH ---
+[related]
+  threshold = 0
+  toLower = false
+
+[[related.indices]]
+  name = "tags"
+  weight = 100
+
+[[related.indices]]
+  name = "categories"
+  weight = 100
+
+[[related.indices]]
+  name = "series"
+  weight = 50
+
+[[related.indices]]
+  name = "authors"
+  weight = 20
+
+[[related.indices]]
+  name = "date"
+  weight = 10
+
+[[related.indices]]
+  applyFilter = false
+  name = "fragmentrefs"
+  type = "fragments"
+  weight = 10

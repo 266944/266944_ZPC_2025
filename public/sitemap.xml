@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
   <url>
-    <loc>https://266944.github.io/Web-3_0/contest/</loc>
-    <lastmod>2025-09-22T16:26:59+02:00</lastmod>
-  </url><url>
-    <loc>https://266944.github.io/Web-3_0/</loc>
-    <lastmod>2025-09-22T16:26:59+02:00</lastmod>
-  </url><url>
-    <loc>https://266944.github.io/Web-3_0/categories/</loc>
-  </url><url>
-    <loc>https://266944.github.io/Web-3_0/tags/</loc>
+    <loc>https://266944_ZPC_2025.com/posts/o-mn%C4%9B/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://266944_ZPC_2025.com/posts/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://266944_ZPC_2025.com/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>

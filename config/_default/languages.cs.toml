@@ -1,0 +1,22 @@
+disabled = false
+languageCode = "cs"
+languageName = "Čeština"
+weight = 1
+title = "ZPC - 2025"
+
+[params]
+  displayName = "CS"
+  isoCode = "cs"
+  rtl = false
+  dateFormat = "2 January 2006"
+  defaultTheme = "dark"
+
+[params.author]
+  name = "Martin Konečný"
+  image = "img/blowfish_logo.png"
+  imageQuality = 96
+  headline = "Student VUT, sportovec, terarista a člověk, který by si raději prostřelil koleno, než aby takovou stránku musel dělat podruhé "
+
+links = [
+    { github = "https://github.com/266944/266944_ZPC_2025" }
+]
