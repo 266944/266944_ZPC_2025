@@ -5,4 +5,13 @@ layout: "simple"
 
 Cílem finálního projektu je vytvořit stroj, který z nevyužitelných zbytků po 3D tisku a nepovedených tisků bude schopen vytvořit nový filament. 
 
-![Schéma Filament recykler](/assets/schema.jpg)
+![Schema](/images/schema.jpg)
+### Moje video
+
+<video autoplay loop muted playsinline 
+  style="transform: rotate(270deg); transform-origin: center center;
+         width: 1536px; height: 1024px;
+         display: block; margin: 0 auto;">
+  <source src="/videos/2/IMG_2153.mp4" type="video/mp4">
+  Váš prohlížeč nepodporuje video tag.
+</video>

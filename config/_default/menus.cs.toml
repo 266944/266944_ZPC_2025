@@ -33,21 +33,21 @@
   weight = 10
 
 [[main]]
-  name = "Projekt 3"
+  name = "Projekt 3 - 3D tisk"
   parent = "Projekty"
-  pageRef = "Projekty/Projekt 3"
+  pageRef = "posts/Projekt 3 - 3D tisk"
   weight = 10
 
   [[main]]
-  name = "Projekt 4"
+  name = "Projekt 4 - Skenování"
   parent = "Projekty"
-  pageRef = "Projekty/Projekt 4"
+  pageRef = "posts/Projekt 4 - Skenování"
   weight = 10
 
   [[main]]
-  name = "Projekt 5"
+  name = "Projekt 5 - Elektronika"
   parent = "Projekty"
-  pageRef = "Projekty/Projekt 5"
+  pageRef = "posts/Projekt 5 - Elektronika"
   weight = 10
 
   [[main]]
