@@ -135,7 +135,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "2"
+    "wordCount": "359"
   }]
   </script>
 
@@ -618,16 +618,63 @@
       </h1>
     </header>
     <section class="max-w-full mt-6 prose dark:prose-invert">
-      
-<h2 class="relative group">Miniprojekt-Nálepka 
-    <div id="miniprojekt-nálepka" class="anchor"></div>
+      <p>Úkolem čtvrtého miniprojektu bylo naskenování předem určeného dílu. Já i můj kolega Jan Ludva jsme dostali přidělený stejný díl a to díl ve tvaru vázy, který byl vyroben aditivní technologií. Jelikož ani jeden z nás neměl se skenováním zkušenosti, rozhodli jsme jít skenovat společněa vzájemně si vypomoct.</p>
+
+<h2 class="relative group">Skenování dílu 
+    <div id="skenování-dílu" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#miniprojekt-n%c3%a1lepka" aria-label="Kotva">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#skenov%c3%a1n%c3%ad-d%c3%adlu" aria-label="Kotva">#</a>
     </span>        
     
 </h2>
+<p>Pomocí výukové prezentace jsme dokázali zprovoznit skener SimScan i příslušnou aplikaci určenou ke skenování. Prezentace neobsahovala pouze popis zapojení skeneru, ale také postup jeho kalibrace a propojení s aplikací.</p>
+<p>Prvním krokem samotného skenování bylo načtení kalibračních bodů, které se nacházely jak na podložce, tak i na samotném dílu – tyto individuální body bylo nutné předem nalepit na povrch vázy. Pomocí těchto bodů jsme následně v aplikaci vytvořili rovinu podložky.</p>
+<p>Poté bylo nutné nastavit skenovací parametry, konkrétně Resolution (rozlišení) a Exposure (expozici).</p>
+<div style="max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: center;">
+  <img 
+       src="/images/4/IMG_2164.jpeg"
+       style="transform: rotate(0deg); transform-origin: center center;
+              width: 390px; height: 270px;
+              border-radius: 20px; object-fit: cover;">
+<p><img 
+src="/images/4/IMG_2169.jpeg"
+style="transform: rotate(0deg); transform-origin: center center;
+width: 390px; height: 270px;
+border-radius: 20px; object-fit: cover;"></p>
+</div>
+<p>Následovalo samotné naskenování dílu. Protože váza nebyla příliš rozměrná a její povrch byl pro skenování vhodný, celý proces proběhl poměrně rychle a bez komplikací. Po dokončení bylo nutné díl vyexportovat ve formátech STL a p5j.</p>
+ <div style="max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: center;">
+  <img 
+       src="/images/4/IMG_2167.jpeg"
+       style="transform: rotate(0deg); transform-origin: center center;
+              width: 390px; height: 270px;
+              border-radius: 20px; object-fit: cover;">
+<p><img 
+src="/images/4/IMG_2171.jpeg"
+style="transform: rotate(0deg); transform-origin: center center;
+width: 390px; height: 270px;
+border-radius: 20px; object-fit: cover;"></p>
+</div>
+<p>Kolega Jan následně celý postup provedl samostatně na svém dílu. Po dokončení následoval úklid pracoviště, uložení skeneru a odstranění kalibračních bodů z vázy.</p>
+
+<h2 class="relative group">Úprava dat v aplikaci GOM Inspect 
+    <div id="úprava-dat-v-aplikaci-gom-inspect" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%c3%baprava-dat-v-aplikaci-gom-inspect" aria-label="Kotva">#</a>
+    </span>        
+    
+</h2>
+<p>Druhou částí úkolu byla úprava naskenovaných dat v aplikaci GOM Inspect.</p>
+<p>Do této aplikace byl nejprve naimportován soubor STL, po čemž následovaly jednotlivé korekce modelu – konkrétně zalepení děr po skenování a odstranění vzniklých fragmentů. Program pro tyto účely nabízí automatické funkce, které fungují velmi spolehlivě.</p>
+<p>Následovalo vyhlazení povrchu a úprava polygonové sítě. Původní sken obsahoval přibližně 450 000 bodů, po zjemnění sítě se jejich počet zvýšil na 1 250 000 bodů.</p>
+<p>Dalším krokem bylo změření plochy dílu, k čemuž má aplikace vlastní funkci. Výsledek měření je možné vidět na přiloženém obrázku.</p>
+<p>Následně bylo potřeba určit maximální rozměr dílu. Bohužel jsem v aplikaci nenašel žádnou funkci, která by tento výpočet prováděla automaticky, a proto jsem zvolil vlastní postup.</p>
+<p>Pomocí vytvoření pomocných kružnic jsem určil krajní body, mezi nimiž jsem poté změřil vzdálenosti. Největší z naměřených hodnot jsem označil jako maximální rozměr dílu.</p>
+<p>Posledním krokem bylo změření jednoho z dílčích rozměrů. Rozhodl jsem se změřit poloměr dolní podstavy, jak je vidět na obrázku níže.</p>
 
     </section>
     <footer class="pt-8">
