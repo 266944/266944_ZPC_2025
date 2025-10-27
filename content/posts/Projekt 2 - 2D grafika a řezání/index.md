@@ -27,7 +27,7 @@ Já jsem si jako motiv své nálepky zvolil logo našeho **sportovního klubu Ml
               border-radius: 20px; object-fit: cover;">
               
   <img 
-       src="/images/2/IMG_2090.jpg"
+       src="/266944_ZPC_2025/images/2/IMG_2090.jpg"
        style="transform:  transform-origin: center center;
               width: 360px; height: 480px;
               border-radius: 20px; object-fit: cover;">
