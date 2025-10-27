@@ -21,7 +21,7 @@ Já jsem si jako motiv své nálepky zvolil logo našeho **sportovního klubu Ml
 
  <div style="max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: center;">
   <img 
-       src="/images/2/KOLOVA1.jpg"
+       src="/266944_ZPC_2025/images/2/KOLOVA1.jpg"
        style="transform:  transform-origin: center center;
               width: 360px; height: 480px;
               border-radius: 20px; object-fit: cover;">
@@ -38,13 +38,13 @@ Po dokončení návrhu řezačka nálepku vyřezala. Následně bylo potřeba pr
  
  <div style="max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: center;">
   <img 
-       src="/images/2/IMG_2092.jpg"
+       src="/266944_ZPC_2025/images/2/IMG_2092.jpg"
        style="transform:  transform-origin: center center;
               width: 360px; height: 480px;
               border-radius: 20px; object-fit: cover;">
               
   <img 
-       src="/images/2/IMG_2096.jpg"
+       src="/266944_ZPC_2025/images/2/IMG_2096.jpg"
        style="transform:  transform-origin: center center;
               width: 360px; height: 480px;
               border-radius: 20px; object-fit: cover;">
@@ -65,7 +65,7 @@ K realizaci jsme obdrželi dvě **kartonové desky o rozměrech 1200 × 800 mm**
 Zvažoval jsem, co z kartonu vyrobit, až jsem narazil na video o **Cayan Tower**, což je výškový mrakodrap postavený v Dubaji. Tento objekt mě zaujal natolik, že jsem se rozhodl vytvořit **vlastní model inspirovaný touto stavbou**. 
 
 <img 
-    src="/images/2/cayan.jpg" 
+    src="/266944_ZPC_2025/images/2/cayan.jpg" 
     style="transform: rotate(0deg); transform-origin: center center;
            border-radius: 20px; overflow: hidden; object-fit: cover;">
 </img>
@@ -105,14 +105,14 @@ Před samotným řezáním bylo nutné upevnit kartonové desky k pracovní mř�
     style="transform: rotate(90deg); transform-origin: center center;
            width: 270px; height: 480px;
            border-radius: 20px; overflow: hidden; object-fit: cover;">
-    <source src="/videos/2/IMG_2153.mp4" type="video/mp4">
+    <source src="/266944_ZPC_2025/videos/2/IMG_2153.mp4" type="video/mp4">
   </video>
 
   <video autoplay loop muted playsinline
     style="transform: rotate(90deg); transform-origin: center center;
            width: 270px; height: 480px;
            border-radius: 20px; overflow: hidden; object-fit: cover;">
-    <source src="/videos/2/IMG_2155.mp4" type="video/mp4">
+    <source src="/266944_ZPC_2025/videos/2/IMG_2155.mp4" type="video/mp4">
   </video>
 </div>
 
@@ -120,13 +120,13 @@ Po vyřezání jsem jednotlivé díly vyndal z desky, což zpětně hodnotím ja
 
 <div style="max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: center;">
   <img 
-       src="/images/2/IMG_2157.jpeg"
+       src="/266944_ZPC_2025/images/2/IMG_2157.jpeg"
        style="transform: rotate(90deg); transform-origin: center center;
               width: 270px; height: 480px;
               border-radius: 20px; object-fit: cover;">
               
   <img 
-       src="/images/2/IMG_2162.jpeg"
+       src="/266944_ZPC_2025/images/2/IMG_2162.jpeg"
        style="transform: rotate(90deg); transform-origin: center center;
               width: 270px; height: 480px;
               border-radius: 20px; object-fit: cover;">
@@ -146,13 +146,13 @@ Zpočátku to působilo komplikovaně kvůli **velkému množství dílů**, av�
 
 <div style="max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: center;">
   <img 
-       src="/images/2/IMG_2181.jpeg"
+       src="/266944_ZPC_2025/images/2/IMG_2181.jpeg"
        style="transform:  transform-origin: center center;
               width: 360px; height: 480px;
               border-radius: 20px; object-fit: cover;">
               
   <img 
-       src="/images/2/IMG_2183.jpeg"
+       src="/266944_ZPC_2025/images/2/IMG_2183.jpeg"
        style="transform:  transform-origin: center center;
               width: 360px; height: 480px;
               border-radius: 20px; object-fit: cover;">
