@@ -1,7 +1,7 @@
 # -- Site Configuration --
 # Více info: https://blowfish.page/docs/getting-started/
 
-baseURL = "https://266944_ZPC_2025.com/"
+baseURL = "https://266944.github.io/266944_ZPC_2025/"
 languageCode = "cs"
 title = "ZPC-2025"
 theme = "blowfish"
