@@ -35,12 +35,8 @@ Pro modelování jednotlivých dílů jsem použil **Autodesk Fusion 360**. Prá
     webkitallowfullscreen="true" 
     mozallowfullscreen="true"  
     frameborder="0"
-    style="
-        display: block;         /* umožní margin auto pro horizontální centrování */
-        margin: 40px auto;      /* vycentruje iframe a přidá svislý odstup */
-        border-radius: 20px;    /* zaoblení rohů */
-        border: 2px solid #ccc; /* jemný rámeček (volitelné) */
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* jemný stín (volitelné) */
+    style="transform: rotate(0deg); transform-origin: center center;
+           border-radius: 20px; overflow: hidden; object-fit: cover;">
     ">
 </iframe>
 
