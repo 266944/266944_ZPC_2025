@@ -18,13 +18,13 @@ Poté bylo nutné nastavit skenovací parametry, konkrétně Resolution (rozliš
 
 <div style="max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: center;">
   <img 
-       src="/images/4/IMG_2164.jpeg"
+       src="/266944_ZPC_2025/images/4/IMG_2164.jpeg"
        style="transform: rotate(0deg); transform-origin: center center;
               width: 390px; height: 270px;
               border-radius: 20px; object-fit: cover;">
               
   <img 
-       src="/images/4/IMG_2169.jpeg"
+       src="/266944_ZPC_2025/images/4/IMG_2169.jpeg"
        style="transform: rotate(0deg); transform-origin: center center;
               width: 390px; height: 270px;
               border-radius: 20px; object-fit: cover;">
@@ -34,13 +34,13 @@ Následovalo samotné naskenování dílu. Protože váza nebyla příliš rozm�
 
  <div style="max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: center;">
   <img 
-       src="/images/4/IMG_2167.jpeg"
+       src="/266944_ZPC_2025/images/4/IMG_2167.jpeg"
        style="transform: rotate(0deg); transform-origin: center center;
               width: 390px; height: 270px;
               border-radius: 20px; object-fit: cover;">
               
   <img 
-       src="/images/4/IMG_2171.jpeg"
+       src="/266944_ZPC_2025/images/4/IMG_2171.jpeg"
        style="transform: rotate(0deg); transform-origin: center center;
               width: 390px; height: 270px;
               border-radius: 20px; object-fit: cover;">

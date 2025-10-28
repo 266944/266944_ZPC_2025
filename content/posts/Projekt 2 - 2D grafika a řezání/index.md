@@ -79,13 +79,13 @@ Zpočátku jsem modeloval v programu **Autodesk Inventor**, který mi je prostř
 
  <div style="max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: center;">
   <img 
-       src="/images/2/Carboar-x.jpg"
+       src="/266944_ZPC_2025/images/2/X.jpg"
        style="transform: rotate(0deg); transform-origin: center center;
               width: 390px; height: 270px;
               border-radius: 20px; object-fit: cover;">
               
   <img 
-       src="/images/2/carboard-z_1.jpg"
+       src="/266944_ZPC_2025/images/2/Z.jpg"
        style="transform: rotate(0deg); transform-origin: center center;
               width: 390px; height: 270px;
               border-radius: 20px; object-fit: cover;">

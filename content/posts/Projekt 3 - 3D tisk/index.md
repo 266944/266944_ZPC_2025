@@ -44,13 +44,13 @@ Modely jsem si dale vyexportoval ve **formátu STL.**, který je pro zpracován�
 
 <div style="max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: center;">
   <img 
-       src="/images/3/prusaslicer.png"
+       src="/266944_ZPC_2025/images/3/prusaslicer.png"
        style="transform: rotate(0deg); transform-origin: center center;
               width: 390px; height: 270px;
               border-radius: 20px; object-fit: cover;">
               
   <img 
-       src="/images/3/gearbox.png"
+       src="/266944_ZPC_2025/images/3/gearbox.png"
        style="transform: rotate(0deg); transform-origin: center center;
               width: 390px; height: 270px;
               border-radius: 20px; object-fit: cover;">
@@ -61,13 +61,13 @@ Po vymodelování jednotlivých součástí následoval 3D tisk. Jelikož jsem t
 
 <div style="max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: center;">
   <img 
-       src="/images/3/IMG_2195.jpeg"
+       src="/266944_ZPC_2025/images/3/IMG_2195.jpeg"
        style="transform: rotate(0deg); transform-origin: center center;
               width: 390px; height: 270px;
               border-radius: 20px; object-fit: cover;">
               
   <img 
-       src="/images/3/IMG_2195.jpeg"
+       src="/266944_ZPC_2025/images/3/IMG_2195.jpeg"
        style="transform: rotate(0deg); transform-origin: center center;
               width: 390px; height: 270px;
               border-radius: 20px; object-fit: cover;">
