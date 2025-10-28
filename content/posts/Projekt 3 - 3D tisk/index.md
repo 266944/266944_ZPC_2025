@@ -27,7 +27,23 @@ Pro zvýšení přesnosti a snížení zátěže na krokový motor jsem do sesta
 
 Pro modelování jednotlivých dílů jsem použil **Autodesk Fusion 360**. Práce s tímto softwarem probíhala překvapivě dobře, protože je velmi podobný programu Autodesk Inventor. Hlavní rozdíl je, že Fusion 360 je omezenější v pokročilých funkcích, na druhou stranu je pro nekomerční účely zdarma. 
 
-<iframe src="https://gmail5614076.autodesk360.com/shares/public/SH90d2dQT28d5b602811b7a8b95caf39959d?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe> 
+<iframe 
+    src="https://gmail5614076.autodesk360.com/shares/public/SH90d2dQT28d5b602811b7a8b95caf39959d?mode=embed" 
+    width="1000" 
+    height="480" 
+    allowfullscreen="true" 
+    webkitallowfullscreen="true" 
+    mozallowfullscreen="true"  
+    frameborder="0"
+    style="
+        display: block;         /* umožní margin auto pro horizontální centrování */
+        margin: 40px auto;      /* vycentruje iframe a přidá svislý odstup */
+        border-radius: 20px;    /* zaoblení rohů */
+        border: 2px solid #ccc; /* jemný rámeček (volitelné) */
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* jemný stín (volitelné) */
+    ">
+</iframe>
+
 
 Modely jsem si dale vyexportoval ve **formátu STL.**, který je pro zpracování dat vhodný. K vygenerování **G-codu**, tedy codu který používá tiskárna, jsem využil **Prusaslicer**. V programu jsem využil nemálo funkcí například funkci **brim**, která udělá vrstvu příléhající na desku záměrně větší, aby se zvýšila stabilita dílu a byly nižší tendence k jeho odtrhnutí od desky, což by mělo za následek kolaps tisku. Nebo funkci **CUT**, díky které jsem jeden z dílů rozpůlil, aby se lépe tisknul a nebylo nutné využítívat podpěry.  
 
