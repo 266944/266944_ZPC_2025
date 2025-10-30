@@ -74,3 +74,20 @@ Po vymodelování jednotlivých součástí následoval 3D tisk. Jelikož jsem t
               border-radius: 20px; object-fit: cover;">
 </div>
 
+Po vytištění jednotlivých součástí následovalo jejich **sestavení**. Při montáži jsem využil jak **3D tiskem vyrobené konektory**, tak také **adhezivní pojiva a šrouby** M3 o délkách 8, 12 a 45 mm. S tisknutými konektory jsem pracoval poprvé, proto výsledné díly neodpovídaly zcela původním představám. V budoucí iteraci bych věnoval **větší pozornost jejich rozměrům**, aby do sebe jednotlivé části lépe zapadaly.
+
+V rámci projektu jsem sice spojení jednotlivých dílů úspěšně realizoval, avšak použití konektorů **nebylo zcela optimální** a při montáži jsem měl **obavy z možného poškození** výtisku. Adhezivní spoj byl aplikován především na rozříznuté části konstrukce, a to zejména z důvodu zajištění její **vodotěsnosti**.
+
+<div style="max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: center;">
+  <img 
+       src="/266944_ZPC_2025/images/3/IMG_2232.jpeg"
+       style="transform: rotate(0deg); transform-origin: center center;
+              width: 390px; height: 270px;
+              border-radius: 20px; object-fit: cover;">
+              
+  <img 
+       src="/266944_ZPC_2025/images/3/IMG_2233.jpeg"
+       style="transform: rotate(0deg); transform-origin: center center;
+              width: 390px; height: 270px;
+              border-radius: 20px; object-fit: cover;">
+</div>
