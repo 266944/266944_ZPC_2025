@@ -135,7 +135,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "2"
+    "wordCount": "489"
   }]
   </script>
 
@@ -618,16 +618,199 @@
       </h1>
     </header>
     <section class="max-w-full mt-6 prose dark:prose-invert">
-      
-<h2 class="relative group">Miniprojekt-Nálepka 
-    <div id="miniprojekt-nálepka" class="anchor"></div>
+      <p>Cílem pátého mini projektu bylo vytvořit funkční <strong>elektrický obvod</strong>. Pro realizaci jsem si zvolila zařízení, které sleduje aktuální <strong>cenu bitcoinu</strong> v intervalu 15 minut a zobrazuje její vývoj v čase na <strong>OLED displeji</strong>.</p>
+
+<h2 class="relative group">Použité knihovny 
+    <div id="použité-knihovny" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#miniprojekt-n%c3%a1lepka" aria-label="Kotva">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#pou%c5%beit%c3%a9-knihovny" aria-label="Kotva">#</a>
     </span>        
     
 </h2>
+<p>V projektu byly využity následující knihovny:</p>
+<p><strong>WiFi.h</strong> – poskytuje rozhraní pro připojení mikrokontroléru ESP32 k Wi-Fi síti (např. funkce WiFi.begin(), WiFi.status() apod.).</p>
+<p><strong>WiFiClientSecure.h</strong> – umožňuje zabezpečené HTTPS připojení pomocí SSL/TLS protokolu.</p>
+<p><strong>HTTPClient.h</strong> – poskytuje jednoduché HTTP/HTTPS API pro odesílání požadavků typu GET nebo POST; spolupracuje s knihovnou WiFiClientSecure.</p>
+<p><strong>ArduinoJson.h</strong> – slouží k parsování (dekódování) JSON odpovědí ze serveru do struktury DynamicJsonDocument.</p>
+<p><strong>Adafruit_GFX.h</strong> – základní grafická knihovna pro práci s textem, fonty a tvary.</p>
+<p><strong>Adafruit_SH110X.h</strong> – ovladač pro OLED displeje s řadičem SH1106/SH1107 (v projektu byla použita verze SH1106 se SPI rozhraním).</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">#include <span class="p">&lt;</span><span class="nt">WiFi.h</span><span class="p">&gt;</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#include <span class="p">&lt;</span><span class="nt">WiFiClientSecure.h</span><span class="p">&gt;</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#include <span class="p">&lt;</span><span class="nt">HTTPClient.h</span><span class="p">&gt;</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#include <span class="p">&lt;</span><span class="nt">ArduinoJson.h</span><span class="p">&gt;</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#include <span class="p">&lt;</span><span class="nt">Adafruit_GFX.h</span><span class="p">&gt;</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#include <span class="p">&lt;</span><span class="nt">Adafruit_SH110X.h</span><span class="p">&gt;</span> 
+</span></span></code></pre></div>
+<h2 class="relative group">Konfigurace a nastavení 
+    <div id="konfigurace-a-nastavení" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#konfigurace-a-nastaven%c3%ad" aria-label="Kotva">#</a>
+    </span>        
+    
+</h2>
+<p>V úvodu programu byly definovány konfigurační konstanty, jako například:</p>
+<p><strong>název a heslo Wi-Fi</strong> sítě,</p>
+<p><strong>interval aktualizace</strong> ceny bitcoinu (15 minut),</p>
+<p><strong>adresa</strong> webové stránky, ze které se získávají data o aktuální ceně.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// ===== Wi-Fi údaje ===== 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">ssid</span> <span class="o">=</span> <span class="s">&#34;Název&#34;</span><span class="p">;</span> <span class="c1">// název Wi-Fi 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">password</span> <span class="o">=</span> <span class="s">&#34;Heslo&#34;</span><span class="p">;</span> <span class="c1">// heslo Wi-Fi 
+</span></span></span><span class="line"><span class="cl"><span class="c1">// ===== CoinGecko API ===== 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">api_url</span> <span class="o">=</span> <span class="s">&#34;https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&amp;vs_currencies=usd&#34;</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl"><span class="c1">// ===== Interval aktualizace ===== 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">waiting_time</span> <span class="o">=</span> <span class="mi">900000</span><span class="p">;</span> <span class="c1">// 15 minut 
+</span></span></span></code></pre></div><p>Dále bylo nutné specifikovat zapojení jednotlivých pinů displeje k mikrokontroléru ESP32.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C" data-lang="C"><span class="line"><span class="cl"><span class="c1">// ===== SPI piny pro OLED ===== 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cp">#define OLED_MOSI 23 
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define OLED_CLK 18 
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define OLED_DC 2 
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define OLED_CS 5 
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define OLED_RESET 4 
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Inicializace OLED (128x64, SPI) 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">Adafruit_SH1106G</span> <span class="nf">display</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="n">OLED_MOSI</span><span class="p">,</span> <span class="n">OLED_CLK</span><span class="p">,</span> <span class="n">OLED_DC</span><span class="p">,</span> <span class="n">OLED_RESET</span><span class="p">,</span> <span class="n">OLED_CS</span><span class="p">);</span> 
+</span></span></code></pre></div><div style="max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: center;">
+  <img 
+       src="/266944_ZPC_2025/images/5/IMG_0378.jpg"
+       style="transform: rotate(270deg); transform-origin: center center;
+              width: 270px; height: 390px;
+              border-radius: 20px; object-fit: contain; 
+              background-color: #eaeaea;">
+<p><img 
+src="/266944_ZPC_2025/images/5/IMG_2246 (1).jpeg"
+style="transform: rotate(270deg); transform-origin: center center;
+width: 270px; height: 390px;
+border-radius: 20px; object-fit: contain; 
+background-color: #eaeaea;"></p>
+</div>
+
+<h2 class="relative group">Funkční popis programu 
+    <div id="funkční-popis-programu" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#funk%c4%8dn%c3%ad-popis-programu" aria-label="Kotva">#</a>
+    </span>        
+    
+</h2>
+<p>Po inicializaci displeje probíhá proces <strong>připojení zařízení k Wi-Fi</strong> síti. Po úspěšném připojení program v hlavní <strong>smyčce (loop)</strong> čeká stanovených 15 minut, poté odešle HTTP požadavek na získání aktuální ceny bitcoinu, zpracuje přijatou JSON odpověď a aktualizuje zobrazenou <strong>hodnotu na OLED displeji</strong>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C" data-lang="C"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl"><span class="nf">delay</span><span class="p">(</span><span class="n">waiting_time</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl"><span class="nf">updateBitcoinPrice</span><span class="p">();</span> 
+</span></span><span class="line"><span class="cl"><span class="p">}</span> 
+</span></span></code></pre></div> <div style="max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: center;">
+  <img 
+       src="/266944_ZPC_2025/images/5/IMG_2254 (1).jpeg"
+       style="transform: rotate(270deg); transform-origin: center center;
+              width: 270px; height: 390px;
+              border-radius: 20px; object-fit: cover;">
+<p><img 
+src="/266944_ZPC_2025/images/5/IMG_2257 (1).jpeg"
+style="transform: rotate(270deg); transform-origin: center center;
+width: 270px; height: 390px;
+border-radius: 20px; object-fit: cover;"></p>
+</div>
+
+<h2 class="relative group">Celý kód 
+    <div id="celý-kód" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#cel%c3%bd-k%c3%b3d" aria-label="Kotva">#</a>
+    </span>        
+    
+</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C" data-lang="C"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;WiFi.h&gt; </span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;WiFiClientSecure.h&gt; </span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;HTTPClient.h&gt; </span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;ArduinoJson.h&gt; </span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;Adafruit_GFX.h&gt; </span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;Adafruit_SH110X.h&gt; </span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="c1">// ===== Wi-Fi údaje ===== 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">ssid</span> <span class="o">=</span> <span class="s">&#34;název&#34;</span><span class="p">;</span> <span class="c1">// název Wi-Fi 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">password</span> <span class="o">=</span> <span class="s">&#34;heslo&#34;</span><span class="p">;</span> <span class="c1">// heslo Wi-Fi 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// ===== CoinGecko API ===== 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">api_url</span> <span class="o">=</span> <span class="s">&#34;https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&amp;vs_currencies=usd&#34;</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// ===== Interval aktualizace ===== 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">const</span> <span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">waiting_time</span> <span class="o">=</span> <span class="mi">900000</span><span class="p">;</span> <span class="c1">// 15 minut 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// ===== SPI piny pro OLED ===== 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cp">#define OLED_MOSI 23 
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define OLED_CLK 18 
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define OLED_DC 2 
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define OLED_CS 5 
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define OLED_RESET 4 
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Inicializace OLED (128x64, SPI) 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">Adafruit_SH1106G</span> <span class="nf">display</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="n">OLED_MOSI</span><span class="p">,</span> <span class="n">OLED_CLK</span><span class="p">,</span> <span class="n">OLED_DC</span><span class="p">,</span> <span class="n">OLED_RESET</span><span class="p">,</span> <span class="n">OLED_CS</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Proměnná pro poslední cenu (šipka ↑/↓) 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">double</span> <span class="n">lastPrice</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl"><span class="n">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl"><span class="nf">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Inicializace OLED 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">display</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">true</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl"><span class="n">display</span><span class="p">.</span><span class="nf">clearDisplay</span><span class="p">();</span> 
+</span></span><span class="line"><span class="cl"><span class="n">display</span><span class="p">.</span><span class="nf">setTextColor</span><span class="p">(</span><span class="n">SH110X_WHITE</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl"><span class="n">display</span><span class="p">.</span><span class="nf">setTextSize</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl"><span class="n">display</span><span class="p">.</span><span class="nf">setCursor</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl"><span class="n">display</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&#34;Connecting WiFi...&#34;</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl"><span class="n">display</span><span class="p">.</span><span class="nf">display</span><span class="p">();</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Připojení k Wi-Fi 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">WiFi</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="n">ssid</span><span class="p">,</span> <span class="n">password</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl"><span class="n">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&#34;Connecting to Wi-Fi&#34;</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="p">(</span><span class="n">WiFi</span><span class="p">.</span><span class="nf">status</span><span class="p">()</span> <span class="o">!=</span> <span class="n">WL_CONNECTED</span><span class="p">)</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl"><span class="nf">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl"><span class="n">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&#34;.&#34;</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl"><span class="p">}</span> 
+</span></span><span class="line"><span class="cl"><span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">Wi-Fi connected!&#34;</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl"><span class="n">display</span><span class="p">.</span><span class="nf">clearDisplay</span><span class="p">();</span> 
+</span></span><span class="line"><span class="cl"><span class="n">display</span><span class="p">.</span><span class="nf">setCursor</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl"><span class="n">display</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&#34;WiFi connected!&#34;</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl"><span class="n">display</span><span class="p">.</span><span class="nf">display</span><span class="p">();</span> 
+</span></span><span class="line"><span class="cl"><span class="nf">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl"><span class="nf">updateBitcoinPrice</span><span class="p">();</span> 
+</span></span><span class="line"><span class="cl"><span class="p">}</span> 
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl"><span class="nf">delay</span><span class="p">(</span><span class="n">waiting_time</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl"><span class="nf">updateBitcoinPrice</span><span class="p">();</span> 
+</span></span><span class="line"><span class="cl"><span class="p">}</span> 
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">updateBitcoinPrice</span><span class="p">()</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">WiFi</span><span class="p">.</span><span class="nf">status</span><span class="p">()</span> <span class="o">!=</span> <span class="n">WL_CONNECTED</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl"><span class="n">WiFiClientSecure</span> <span class="n">client</span><span class="p">;</span> 
+</span></span></code></pre></div>
+<h2 class="relative group">Videoukázka hotového projektu 
+    <div id="videoukázka-hotového-projektu" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#videouk%c3%a1zka-hotov%c3%a9ho-projektu" aria-label="Kotva">#</a>
+    </span>        
+    
+</h2>
+<div style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+  <video autoplay loop muted playsinline
+      style="transform: rotate(270deg); transform-origin: center center;
+             width: 100%; max-width: 540px; height: auto;
+             border-radius: 20px; object-fit: contain;">
+    <source src="/266944_ZPC_2025/videos/5/IMG_2251.mp4" type="video/mp4">
+  </video>
+</div>
 
     </section>
     <footer class="pt-8">
