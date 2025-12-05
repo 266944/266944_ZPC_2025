@@ -91,3 +91,13 @@ V rámci projektu jsem sice spojení jednotlivých dílů úspěšně realizoval
               width: 390px; height: 270px;
               border-radius: 20px; object-fit: cover;">
 </div>
+
+## Videoukázka hotového projektu
+<div style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+  <video autoplay loop muted playsinline
+      style="transform: rotate(0deg); transform-origin: center center;
+             width: 100%;  height: auto;
+             border-radius: 20px; object-fit: contain;">
+    <source src="/266944_ZPC_2025/videos/3/IMG_0520.mp4" type="video/mp4">
+  </video>
+</div>
