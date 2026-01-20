@@ -75,9 +75,7 @@ Po těchto úpravách proběhlo úspěšné funkční testování.
     webkitallowfullscreen="true" 
     mozallowfullscreen="true"  
     frameborder="0"
-    style="transform: rotate(0deg); transform-origin: center center;
-           border-radius: 20px; overflow: hidden; object-fit: cover;">
-    ">
+    style="border-radius: 20px; overflow: hidden; object-fit: cover;">
 </iframe>
 
 ## 3. Iterace / O pár iterací později
@@ -128,11 +126,19 @@ Spoje: Na stroji se nachází i několik bistabilních mechanismů, které zaji�
     ">
 </iframe>
 
-### Video finální iterace
+### Fotky finální iterace
 
-<video autoplay loop muted playsinline
-    src="/266944_ZPC_2025/videos/f/IMG_2413.mp4" 
-    style="transform: rotate(0deg); transform-origin: center center;
-           border-radius: 20px; overflow: hidden; object-fit: cover;">
-</video>
+<div style="max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: center;">
+  <img 
+       src="/266944_ZPC_2025/images/f/IMG_2570.jpeg"
+       style="transform: rotate(0deg); transform-origin: center center;
+              width: 480px; height: 270px;
+              border-radius: 20px; object-fit: cover;">
+              
+  <img 
+       src="/266944_ZPC_2025/images/f/IMG_2571.jpeg"
+       style="transform: rotate(0deg); transform-origin: center center;
+              width: 480px; height: 270px;
+              border-radius: 20px; object-fit: cover;">
+</div>
 Will be there soon. 
