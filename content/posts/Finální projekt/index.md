@@ -68,7 +68,7 @@ Po těchto úpravách proběhlo úspěšné funkční testování.
 ### Model 2. iterace
 
 <iframe 
-    src="https://gmail5614076.autodesk360.com/g/shares/SH90d2dQT28d5b60281173346ff951c31eeb ?mode=embed" 
+    src="https://gmail5614076.autodesk360.com/g/shares/SH90d2dQT28d5b60281173346ff951c31eeb?mode=embed" 
     width="1000" 
     height="480" 
     allowfullscreen="true" 
