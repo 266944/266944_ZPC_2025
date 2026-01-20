@@ -68,7 +68,7 @@ Po těchto úpravách proběhlo úspěšné funkční testování.
 ### Model 2. iterace
 
 <iframe 
-    src="https://gmail5614076.autodesk360.com/shares/public/SH90d2dQT28d5b602811b7a8b95caf39959d?mode=embed" 
+    src="https://gmail5614076.autodesk360.com/g/shares/SH90d2dQT28d5b602811703e7b2bfaaefd2d?mode=embed" 
     width="1000" 
     height="480" 
     allowfullscreen="true" 
@@ -116,7 +116,7 @@ Spoje: Na stroji se nachází i několik bistabilních mechanismů, které zaji�
 ### Model finální iterace
 
 <iframe 
-    src="https://gmail5614076.autodesk360.com/shares/public/SH90d2dQT28d5b602811b7a8b95caf39959d?mode=embed" 
+    src="https://gmail5614076.autodesk360.com/g/shares/SH90d2dQT28d5b602811703e7b2bfaaefd2d?mode=embed" 
     width="1000" 
     height="480" 
     allowfullscreen="true" 
