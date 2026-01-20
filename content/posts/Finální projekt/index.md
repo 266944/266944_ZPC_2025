@@ -68,7 +68,7 @@ Po těchto úpravách proběhlo úspěšné funkční testování.
 ### Model 2. iterace
 
 <iframe 
-    src="https://gmail5614076.autodesk360.com/g/shares/SH90d2dQT28d5b602811703e7b2bfaaefd2d?mode=embed" 
+    src="https://gmail5614076.autodesk360.com/g/shares/SH90d2dQT28d5b60281173346ff951c31eeb?mode=embed" 
     width="1000" 
     height="480" 
     allowfullscreen="true" 
@@ -129,3 +129,10 @@ Spoje: Na stroji se nachází i několik bistabilních mechanismů, které zaji�
 </iframe>
 
 ### Video finální iterace
+
+<video autoplay loop muted playsinline
+    src="/266944_ZPC_2025/videos/f/IMG_2413.mp4" 
+    style="transform: rotate(0deg); transform-origin: center center;
+           border-radius: 20px; overflow: hidden; object-fit: cover;">
+</video>
+Will be there soon. 
