@@ -126,7 +126,7 @@ Spoje: Na stroji se nachází i několik bistabilních mechanismů, které zaji�
     ">
 </iframe>
 
-### Fotky finální iterace
+### Fotky a Video finální iterace
 
 <div style="max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: center;">
   <img 
@@ -141,4 +141,9 @@ Spoje: Na stroji se nachází i několik bistabilních mechanismů, které zaji�
               width: 480px; height: 270px;
               border-radius: 20px; object-fit: cover;">
 </div>
-Will be there soon. 
+
+<video autoplay loop muted playsinline
+    src="/266944_ZPC_2025/videos/f/IMG_2577.mp4" 
+    style="transform: rotate(0deg); transform-origin: center center;
+           border-radius: 20px; overflow: hidden; object-fit: cover;">
+</video>
